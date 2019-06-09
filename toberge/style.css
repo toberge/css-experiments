@@ -1,0 +1,68 @@
+/*h1 {
+    align-self: center;
+    text-align: center;
+}*/
+
+:root {
+    --side-bg: #555533;
+    --center-bg: #3B3B19;
+    --txt-fill: #9E9E7C;
+}
+
+body {
+    font-family: Cantarell, sans-serif;
+    color: var(--txt-fill);
+    background: #3B3B19 url(bg.jpg) no-repeat fixed center center;
+}
+
+h2 {
+    font-family: Georgia, serif;
+}
+
+.smol {
+    color: #555533;
+    font-size: 0.9em;
+}
+
+a {
+    color: var(--txt-fill);
+}
+
+.aaa {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-content: space-around;
+}
+
+.centroom {
+    background-color:  var(--center-bg);
+    width: 360px;
+    text-align: center;
+    /* much crap I know */
+    border-left-width: 64px;
+    border-left-color: var(--side-bg);
+    border-left-style: solid;
+    border-right-width: 64px;
+    border-right-color: var(--side-bg);
+    border-right-style: solid;
+}
+
+.sidediv {
+    background-color: var(--side-bg);
+    flex-grow: 1;
+    solid-opacity: 50%;
+}
+
+.leftie {
+
+    text-align: right;
+}
+.rightie {
+    background-color: var(--side-bg);
+    flex-grow: 1;
+    text-align: left;
+}
