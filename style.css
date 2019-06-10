@@ -7,20 +7,32 @@
     --side-bg: #555533;
     --center-bg: #3B3B19;
     --txt-fill: #9E9E7C;
+    --txt-stark: #121100;
 }
 
 body {
-    font-family: Cantarell, sans-serif;
+    font-family: Cantarell, Calibri, sans-serif;
     color: var(--txt-fill);
     background: #3B3B19 url(bg.jpg) no-repeat fixed center center;
 }
 
-h2 {
-    font-family: Georgia, serif;
+h1, h2 {
+    font-family: Georgia, "Liberation Serif", serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px;
 }
 
 .smol {
-    color: #555533;
+    color: var(--txt-stark) /*#555533*/;
     font-size: 0.9em;
 }
 
@@ -35,12 +47,15 @@ a {
 
 .container {
     display: flex;
-    align-content: space-around;
+    padding: 0 2%; /* horizontal only */
+    /*align-content: space-around;*/
 }
 
 .centroom {
     background-color:  var(--center-bg);
-    width: 360px;
+    margin: revert; /* seems to work better than auto */
+    width: /*360px*/30%;
+    /*padding: 32px;*/
     text-align: center;
     /* much crap I know */
     border-left-width: 64px;
@@ -53,16 +68,15 @@ a {
 
 .sidediv {
     background-color: var(--side-bg);
-    flex-grow: 1;
+    margin: revert;
+    width: 35%;
+    /*flex-grow: 1;*/
     solid-opacity: 50%;
 }
 
 .leftie {
-
     text-align: right;
 }
 .rightie {
-    background-color: var(--side-bg);
-    flex-grow: 1;
     text-align: left;
 }
