@@ -3,18 +3,26 @@
     text-align: center;
 }*/
 
+/* BLOODY GENERAL SECTION */
+
+
 :root {
+    --txt-fill: #9E9E7C;
     --side-bg: #555533;
     --center-bg: #3B3B19;
-    --txt-fill: #9E9E7C;
     --txt-stark: #121100;
+    --dark-bg: #3B3B19;
+
+    color: var(--txt-fill);
+    font-family: Cantarell, Calibri, sans-serif;
+}
+body {
+    background: var(--dark-bg) url(bg.jpg) no-repeat fixed center center;
 }
 
-body {
-    font-family: Cantarell, Calibri, sans-serif;
-    color: var(--txt-fill);
-    background: #3B3B19 url(bg.jpg) no-repeat fixed center center;
-}
+
+
+/* TEXT SECTION */
 
 h1, h2 {
     font-family: Georgia, "Liberation Serif", serif;
@@ -22,13 +30,6 @@ h1, h2 {
 
 .header {
     text-align: center;
-}
-
-.bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0 10px;
 }
 
 .smol {
@@ -44,6 +45,10 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
+
+
+
+/* LAYOUT SECTION */
 
 .container {
     display: flex;
@@ -72,6 +77,8 @@ a {
     width: 35%;
     /*flex-grow: 1;*/
     solid-opacity: 50%;
+    display: inline-block;
+    /* maybe? */
 }
 
 .leftie {
@@ -80,3 +87,44 @@ a {
 .rightie {
     text-align: left;
 }
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px;
+}
+
+
+/* FANCY DROPDOWN SECTION */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--center-bg);
+    /*min-width: 100px;*/
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1; /* what is this? */
+}
+
+.dropdown-content a {
+    color: var(--txt-fill);
+    /*padding: 12px 16px;*/
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dark-bg);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+*/
