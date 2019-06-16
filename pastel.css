@@ -1,0 +1,58 @@
+:root {
+    --color1: #e1f7d5;
+    --color2: #ffbdbd;
+    --color3: #c9c9ff;
+    --color4: #f1cbff;
+    --bg-color: #ffffff;
+}
+
+.body {
+    background-color: var(--bg-color);
+}
+
+div.tile {
+    margin: 2% 2%;
+    width: 16%;
+    height: 3em; /* trying to get it to be 16% */
+    color: var(--bg-color);
+    float: left;
+    text-align: center;
+    align-content: center;
+    padding-top: 2em;
+}
+
+div.one {
+    background-color: var(--color1);
+    font-weight: bold;
+}
+
+div.one:hover {
+    background-color: var(--color2);
+}
+
+
+div.two {
+    background-color: var(--color2);
+}
+
+div.two:hover {
+    background-color: var(--color4);
+}
+
+
+div.three {
+    background-color: var(--color3);
+}
+
+div.three:hover {
+    background-color: var(--color1);
+}
+
+
+div.four {
+    background-color: var(--color4);
+}
+
+div.four:hover {
+    background-color: var(--color3);
+}
