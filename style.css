@@ -28,6 +28,10 @@ h1, h2 {
     font-family: Georgia, "Liberation Serif", serif;
 }
 
+h3 {
+    line-height: 0.01em; /* I don't want THAT much space */
+}
+
 .header {
     text-align: center;
 }
@@ -63,12 +67,14 @@ a {
     /*padding: 32px;*/
     text-align: center;
     /* much crap I know */
+    /*
     border-left-width: 64px;
     border-left-color: var(--side-bg);
     border-left-style: solid;
     border-right-width: 64px;
     border-right-color: var(--side-bg);
     border-right-style: solid;
+    */
 }
 
 .sidediv {
@@ -81,11 +87,19 @@ a {
     /* maybe? */
 }
 
+/*
+ * padding needs to be side-specific cuz its flipped
+ * and with padding we can use percentage to specify
+ * fixed-size borders: BEGONE!
+ */
+
 .leftie {
     text-align: right;
+    padding: 0 3% 0 0.5%;
 }
 .rightie {
     text-align: left;
+    padding: 0 0.5% 0 3%;
 }
 
 .bottom {
@@ -95,12 +109,16 @@ a {
     padding: 0 10px;
 }
 
+td, th {
+    width: 10%; /* seems to auto-adjust when overflowing */
+}
+
 
 /* FANCY DROPDOWN SECTION */
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 .dropdown-content {
@@ -127,3 +145,11 @@ a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
+img.pixel-art {
+    width: 40%;
+    height: auto;
+    image-rendering: crisp-edges;
+}
+
