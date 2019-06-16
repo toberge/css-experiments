@@ -21,9 +21,14 @@ div.tile {
     padding-top: 2em;
 }
 
+div.tile:hover {
+    font-weight: bold;
+}
+
+
 div.one {
     background-color: var(--color1);
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 div.one:hover {
