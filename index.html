@@ -10,14 +10,14 @@
     <title>Welcome to the Interwebs</title>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>welcome to the interwebs</h1>
         <h2>have a safe ride</h2>
         <h3>¯\_(ツ)_/¯</h3>
-    </div>
-    <div class="container">
-
-        <div class="sidediv leftie">
+    </header>
+    <main>
+        <!-- Ahem, I let these divs become sections. Is that be correct? -->
+        <section class="sidediv" id="leftie">
             <h3>this is a</h3>
             <p>t e s t</p>
             <p>
@@ -29,9 +29,9 @@
                     <a href="https://wikipedia.org">wiki</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="centroom">
+        <section> class="centroom">
             <h2>welcome to</h2>
             <p>i n t e r n e t</p>
             <p>
@@ -39,15 +39,15 @@
                    href="http://iblack.sexy">(scowl)</a>
             </p>
             <p><i class="fas fa-exclamation-triangle fa-fw"></i> WIP <i class="fas fa-spinner fa-fw fa-spin"></i> WIP <i class="fas fa-exclamation-triangle fa-fw"></i></p>
-        </div>
+        </section>
 
-        <div class="sidediv rightie">
+        <section class="sidediv" id="rightie">
             <table>
                 <tr>
-                    <th><h3>henlo</h3></th>
-                    <th><h3>henlo</h3></th>
-                    <th><h3>henlo</h3></th>
-                    <th><h3>henlo</h3></th>
+                    <th><h3 class="table-header">henlo</h3></th>
+                    <th><h3 class="table-header">henlo</h3></th>
+                    <th><h3 class="table-header">henlo</h3></th>
+                    <th><h3 class="table-header">henlo</h3></th>
                 </tr>
                 <tr>
                     <td><i class="fab fa-github-alt fa-fw"></i> <a href="https://github.com/toberge/">github</a></td>
@@ -80,9 +80,10 @@
                     <td><i class="fab fa-wikipedia-w fa-fw"></i> <a href="https://wiki.archlinux.org/">archwiki</a></td>
                 </tr>
             </table>
-        </div>
-
-    </div>
-    <p class="smol bottom">  img credz: Arboreal Ballet by Bob Farell from some version of Ubuntu</p>
+        </section>
+    </main>
+    <footer>
+        <small> img credz: Arboreal Ballet by Bob Farell from some version of Ubuntu</small>
+    </footer>
 </body>
 </html>

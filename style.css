@@ -28,15 +28,15 @@ h1, h2 {
     font-family: Georgia, "Liberation Serif", serif;
 }
 
-h3 {
+h3.table-header {
     line-height: 0.01em; /* I don't want THAT much space */
 }
 
-.header {
+header {
     text-align: center;
 }
 
-.smol {
+small { /* unbeknownst to me, the smol is already present... */
     color: var(--txt-stark) /*#555533*/;
     font-size: 0.9em;
 }
@@ -54,7 +54,7 @@ a {
 
 /* LAYOUT SECTION */
 
-.container {
+main {
     display: flex;
     padding: 0 2%; /* horizontal only */
     /*align-content: space-around;*/
@@ -93,16 +93,16 @@ a {
  * fixed-size borders: BEGONE!
  */
 
-.leftie {
+#leftie {
     text-align: right;
     padding: 0 3% 0 0.5%;
 }
-.rightie {
+#rightie {
     text-align: left;
     padding: 0 0.5% 0 3%;
 }
 
-.bottom {
+footer {
     position: absolute;
     bottom: 0;
     left: 0;
