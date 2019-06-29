@@ -17,7 +17,7 @@
     font-family: Cantarell, Calibri, sans-serif;
 }
 body {
-    background: var(--dark-bg) url(bg.jpg) no-repeat fixed center center;
+    background: var(--dark-bg) url(../img/bg.jpg) no-repeat fixed center center;
 }
 
 

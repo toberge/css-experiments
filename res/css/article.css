@@ -1,0 +1,97 @@
+:root {
+
+    --color1: #b34150;
+    --color2: #e75850;
+    --color3: #f59e30;
+    --color4: #deca6e;
+    --color5: #3dd2e9;
+
+}
+
+/* something to note: we have !important that makes the attribute be _absolutely final_ */
+
+
+body {
+    color: white;
+    font-family: Georgia, "Liberation Serif", serif;
+    background-color: var(--color1);
+}
+
+header {
+    text-align: center;
+    padding: 2%;
+}
+
+nav {
+
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--color1); /* needs a bg to be visible in sticky pos */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.4%;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 0.4% 0.3%;
+    margin: 0 0;
+    width: 5%;
+    border-radius: 2%;
+}
+/* TODO what's up with the space between menu item bgs? */
+
+nav li a:hover {
+    background-color: var(--color2);
+
+}
+
+.active-nav {
+    background-color: var(--color2);
+}
+
+
+main {
+    padding: 2% 20% 0 20%;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: var(--color3);
+    text-decoration-color: var(--color3);
+}
+
+a:visited {
+    color: var(--color3);
+    text-decoration-color: var(--color3);
+}
+
+footer {
+    padding-top: 1%;
+    width: 100%;
+}
+
+.image {
+    background-image: url("../img/violet.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    box-shadow: 0 0 7px 10px var(--color3);
+    margin: 2% 0;
+    border: solid var(--color4) 5px; /* demonstrating that border is inside and not part of shadow */
+}
