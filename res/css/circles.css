@@ -84,3 +84,9 @@ main.central {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/*
+Takeaways:
+Vertical borders merge - they gotta be 20px above and below each circle/space because of that.
+Horizontal borders *do not* - they are handled accordingly.
+ */

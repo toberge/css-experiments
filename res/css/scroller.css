@@ -1,0 +1,35 @@
+body {
+    font-family: "Cantarell Extra Bold", sans-serif;
+    background-color: palevioletred;
+    color: white;
+}
+
+h1 {
+    position: fixed;
+    font-size: 72px;
+    top: 30%;
+    left: 20%;
+    text-align: center;
+    width: 60%;
+    z-index: 200;
+    box-shadow: 0 0 160px 50px white;
+    border-radius: 20px;
+}
+
+p {
+    font-family: "DejaVu Serif", serif;
+    font-size: 36px;
+    color: crimson;
+    opacity: 30%;
+    transform: skewX(-23deg); /* because it exists */
+    margin-left: 64px;
+}
+
+/*
+So: We have the position property:
+position: [static|relative|absolute|fixed|sticky];
+--> default is static
+    relative lets you offset from other element
+    absolute and fixed use absolute positioning - and fixed element stay where they are when you scroll
+    sticky becomes fixed when you scroll past a certain point
+ */

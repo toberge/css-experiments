@@ -95,3 +95,15 @@ footer {
     margin: 2% 0;
     border: solid var(--color4) 5px; /* demonstrating that border is inside and not part of shadow */
 }
+
+/*
+overflow: [hidden|scroll|visible]; --> default visible, hidden means cutoff, scroll gives scrollbar
+defaults may be set that you do not want, override them somewhere - e.g. in body or *
+visibility: [hidden|visible]; --> note that it still exists as space-taking element when hidden
+                                  use display: none; to completely destroy it
+also, setting min/max width/height can be helpful, and you prolly should use them pixels some more I guess
+and margin: 0 auto; for horizontal centering... as long as it has a width! djeez.
+
+box-sizing: [content-box|border-box|...]; --> cont. is default, border-box lets width include border and padding.
+Can be more helpful when managing layout, yeah.
+ */
