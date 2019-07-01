@@ -35,15 +35,21 @@ position: [static|relative|absolute|fixed|sticky];
 
 z-index: [integer value]; --> ignored if position is static!
 
-display: [inline|block|inline-block|none|...];
+display: [inline|block|inline-block|flex|...];
 --> default depends on element type, text is usually inline but hX are block
     inline elements cannot have their height&width specified
     block elements can have their dimensions set, and fill entire page width by default
     inline-block appear next to each other and you can set their width&height and so on
+    flex(ible) means stuff - there's also a justify-content: space-between; thing that might be useful
+justify-content: [flex-start|flex-end|center|space-between|space-around|...]
+--> adjusting element inside flex
 
 float: [left|right]; --> as simple as it sounds. Must have width.
 
 clear: [left|right|both|none];
 --> determines where the element will refrain from touching another element within same parent.
     Sorta related to float.
+
+preferred unit for some font thingies is em, aye aye
+but do unitless for line-height since that follows the font size
  */

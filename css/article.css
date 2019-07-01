@@ -87,7 +87,7 @@ footer {
 }
 
 .image {
-    background-image: url("../img/violet.jpg");
+    background-image: url("../res/img/violet.jpg");
     background-size: cover;
     background-position: center;
     height: 400px;
