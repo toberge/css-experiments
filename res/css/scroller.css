@@ -32,4 +32,18 @@ position: [static|relative|absolute|fixed|sticky];
     relative lets you offset from other element
     absolute and fixed use absolute positioning - and fixed element stay where they are when you scroll
     sticky becomes fixed when you scroll past a certain point
+
+z-index: [integer value]; --> ignored if position is static!
+
+display: [inline|block|inline-block|none|...];
+--> default depends on element type, text is usually inline but hX are block
+    inline elements cannot have their height&width specified
+    block elements can have their dimensions set, and fill entire page width by default
+    inline-block appear next to each other and you can set their width&height and so on
+
+float: [left|right]; --> as simple as it sounds. Must have width.
+
+clear: [left|right|both|none];
+--> determines where the element will refrain from touching another element within same parent.
+    Sorta related to float.
  */
