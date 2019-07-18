@@ -1,0 +1,99 @@
+:root {
+    font-family: "Fira Code Light", "Courier New", "DejaVu Sans Mono", "Liberation Mono", monospace;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+.stripe {
+    color: #b34150;
+    background-color: #b34150;
+    width: 180%;
+    position: fixed;
+    z-index: -2;
+    transform: translate(-40%, 10%) rotate(20deg) ;
+}
+
+#upper-stripe {
+    height: 100px;
+    top: 200px;
+}
+
+#lower-stripe {
+    height: 180px;
+    top: 400px;
+    left: 30px;
+}
+
+header {
+    position: relative;
+    width: 60%;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 0; /* this one acts up... */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e75850;
+    border-radius: 10px 10px 0 0;
+}
+
+
+nav li {
+    display: inline-block;
+    margin: 3px 20px;
+    padding: 2px 5px;
+}
+
+nav li:hover {
+    background-color: #b34150;
+}
+
+main {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+article {
+    box-shadow: 0 0 5px 10px #d1ecff;
+    border-radius: 20px;
+    background-color: #d1ecff;
+    margin: 40px 0;
+    padding: 5px 50px 10px 50px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h2 {
+    font-family: "Fira Code", monospace;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #b34150;
+    border-top-right-radius: 30px;
+    font-weight: bold;
+}
