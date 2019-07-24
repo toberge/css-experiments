@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: #777;
+    background-color: #D0CCB3;
 }
 
 /*------------------------------------------------
@@ -39,13 +39,13 @@
 
 .shelf {
     z-index: -1;
-    background-color: #e75850;
+    background-color: #4A9796;
     position: relative; /* also f-ing important */
 }
 
 .drawer {
     z-index: 2;
-    background-color: #232323;
+    background-color: #2C4756;
     transition: height 2s;
 }
 
@@ -70,3 +70,13 @@
 #jooo {
     grid-column: auto / span 3;
 }
+
+
+/*
+Color set:
+2C4756 drawer
+4A9796 shelf
+D0CCB3 grid
+8BEBE8 text?
+F84C4B red color, where?
+ */

@@ -50,28 +50,26 @@
 </div>
 </body>
 <script defer>
-        const reveal = () => {
-            /* document.getElementsByClassName(".drawer").forEach(element => {
-                element.active
-            }); */
-            // document.getElementsByClassName("drawer")
-            requestAnimationFrame(() => {
-                // document.getElementById("jooo").style.height = 0;
-                // $("jooo").attr("disabled", "true");
-                console.log("raf call");
-            }, 0);
-            console.log("revealing...");
-            return;
-        };
-    
-        var drawers = document.getElementsByClassName("drawer");
-        for (const drawer in drawers) {
-            if (drawers.hasOwnProperty(drawer)) { /* WTF IS THIS */
-                const element = drawers[drawer];
-                
-                requestAnimationFrame(() => element.style.height = 0, 0);
-            }
+    let drawers = document.getElementsByClassName("drawer");
+    let count = 0;
+
+    for (const drawer in drawers) {
+        if (drawers.hasOwnProperty(drawer)) { /* WTF IS THIS */
+            const element = drawers[drawer];
+
+            window.setTimeout(() => {
+                element.style.height = 0;
+            }, 300 * count);
+            /* stupid hack, I guess
+             * - wanted to try chaining event handlers,
+             * but didn't get it to work
+             */
+            count++;
+
+        } else {
+            console.log("hey, what causes this?");
         }
-        console.log(`There are ${drawers.length} drawers`);
-        </script>
+    }
+    console.log(`There are ${drawers.length} drawers`);
+</script>
 </html>
