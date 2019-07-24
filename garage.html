@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./css/garage.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Words Will Appear</title>
+</head>
+<body>
+<div class="grid">
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">so</div>
+    </div>
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">no</div>
+    </div>
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">chi</div>
+    </div>
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">no</div>
+    </div>
+
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">sa</div>
+    </div>
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">da</div>
+    </div>
+    <div class="shelf">
+        <div class="drawer"></div>
+        <div class="letter">me</div>
+    </div>
+    <div class="shelf"><div class="drawer"></div></div>
+
+
+    <div class="shelf" id="jooo">
+        <div class="drawer"></div>
+        <div class="letter">jooooooooooooooooooooooooo</div>
+    </div>
+    <div class="shelf" onclick="reveal();">
+        <div class="drawer"></div>
+        <div class="letter">jo</div>
+    </div>
+</div>
+</body>
+<script defer>
+        const reveal = () => {
+            /* document.getElementsByClassName(".drawer").forEach(element => {
+                element.active
+            }); */
+            // document.getElementsByClassName("drawer")
+            requestAnimationFrame(() => {
+                // document.getElementById("jooo").style.height = 0;
+                // $("jooo").attr("disabled", "true");
+                console.log("raf call");
+            }, 0);
+            console.log("revealing...");
+            return;
+        };
+    
+        var drawers = document.getElementsByClassName("drawer");
+        for (const drawer in drawers) {
+            if (drawers.hasOwnProperty(drawer)) { /* WTF IS THIS */
+                const element = drawers[drawer];
+                
+                requestAnimationFrame(() => element.style.height = 0, 0);
+            }
+        }
+        console.log(`There are ${drawers.length} drawers`);
+        </script>
+</html>

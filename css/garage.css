@@ -1,0 +1,72 @@
+/*------------------------------------------------
+    Grid setup
+------------------------------------------------*/
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #777;
+}
+
+/*------------------------------------------------
+    Shared layout properties
+------------------------------------------------*/
+
+.grid,
+.shelf,
+.drawer,
+.letter {
+    height: 100%;
+    width: 100%;
+}
+
+.drawer,
+.letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*------------------------------------------------
+    Specific properties
+------------------------------------------------*/
+
+.shelf {
+    z-index: -1;
+    background-color: #e75850;
+    position: relative; /* also f-ing important */
+}
+
+.drawer {
+    z-index: 2;
+    background-color: #232323;
+    transition: height 2s;
+}
+
+.drawer:active {
+    height: 0;
+}
+
+.letter {
+    z-index: 1;
+    /*border: 10px solid crimson;*/
+    color: white;
+    font-family: "Roboto Medium", "DejaVu Sans", "Liberation Sans", "Arial", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 130px;
+    /* background-color: #3dd2e9; */
+    display: inline-block; /* FUCKING IMPORTANT SHIT RIGHT HERE */
+}
+
+#jooo {
+    grid-column: auto / span 3;
+}
