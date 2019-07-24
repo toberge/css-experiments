@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="./css/garage.css">
+<link rel="stylesheet" href="./css/garage.css" type="text/css">
+<link rel="stylesheet" href="./css/garage-jojo.css" type="text/css">
 <head>
     <meta charset="UTF-8">
     <title>Words Will Appear</title>
@@ -40,10 +41,10 @@
 
 
     <div class="shelf" id="jooo">
-        <div class="drawer"></div>
+        <div class="drawer" id="jooo-drawer"></div>
         <div class="letter">jooooooooooooooooooooooooo</div>
     </div>
-    <div class="shelf" onclick="reveal();">
+    <div class="shelf">
         <div class="drawer"></div>
         <div class="letter">jo</div>
     </div>
@@ -57,9 +58,11 @@
         if (drawers.hasOwnProperty(drawer)) { /* WTF IS THIS */
             const element = drawers[drawer];
 
+            if (element.id === "jooo-drawer") count+=4;
             window.setTimeout(() => {
                 element.style.height = 0;
             }, 300 * count);
+            if (element.id === "jooo-drawer") count+=6.5;
             /* stupid hack, I guess
              * - wanted to try chaining event handlers,
              * but didn't get it to work

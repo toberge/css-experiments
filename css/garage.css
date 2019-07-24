@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
+
 /*------------------------------------------------
     Grid setup
 ------------------------------------------------*/
@@ -20,8 +22,7 @@
 
 .grid,
 .shelf,
-.drawer,
-.letter {
+.drawer {
     height: 100%;
     width: 100%;
 }
@@ -29,8 +30,6 @@
 .drawer,
 .letter {
     position: absolute;
-    top: 0;
-    left: 0;
 }
 
 /*------------------------------------------------
@@ -47,6 +46,8 @@
     z-index: 2;
     background-color: #2C4756;
     transition: height 1s;
+    top: 0;
+    left: 0;
 }
 
 .drawer:active {
@@ -57,26 +58,24 @@
     z-index: 1;
     /*border: 10px solid crimson;*/
     color: white;
-    font-family: "Roboto Medium", "DejaVu Sans", "Liberation Sans", "Arial", sans-serif;
+    font-family: "Roboto Medium", "Ubuntu", "DejaVu Sans", "Liberation Sans", "Arial", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    padding-top: 130px;
     /* background-color: #3dd2e9; */
     display: inline-block; /* FUCKING IMPORTANT SHIT RIGHT HERE */
+    /* screw it, let's center it in this way */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-#jooo {
-    grid-column: auto / span 3;
-}
-
 
 /*
 Color set:
 2C4756 drawer
 4A9796 shelf
 D0CCB3 grid
-8BEBE8 text?
+8BEBE8 text? nope.
 F84C4B red color, where?
  */

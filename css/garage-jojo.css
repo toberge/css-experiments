@@ -1,0 +1,9 @@
+/* bits specific to jojo lyrics */
+
+#jooo {
+    grid-column: auto / span 3;
+}
+
+#jooo .drawer {
+    transition: height 3s;
+}
