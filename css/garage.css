@@ -46,7 +46,7 @@
 .drawer {
     z-index: 2;
     background-color: #2C4756;
-    transition: height 2s;
+    transition: height 1s;
 }
 
 .drawer:active {
