@@ -24,7 +24,7 @@ ws.onmessage= event=> {
     }
 };
 
-const url = 'http://bigdata.stud.iie.ntnu.no/sentiment/webresources/sentiment?api-key=Happy!!!';
+const url = 'http://bigdata.stud.iie.ntnu.no/sentiment/webresources/sentiment?api-key=Happy%21%21%21';
 // api-key does not seem to be necessary after all, wow
 
 const fetchMood = (data) => {
@@ -80,8 +80,9 @@ const moods = [
     'magnificent'
 ];
 
-const url = 'http://bigdata.stud.iie.ntnu.no/sentiment/webresources/sentiment?api-key=Happy!!!';
+const url = 'http://bigdata.stud.iie.ntnu.no/sentiment/webresources/sentiment?api-key=Happy%21%21%21';
 // api-key does not seem to be necessary after all, wow
+// note that in urls ! is encoded as %21, Chrome compained but Firefox did not.
 
 const change = code => {
     if (code < 0 || code > 4) return;
@@ -128,3 +129,18 @@ button.addEventListener("click", evt => {
 });
 
 
+let errorField = document.getElementById("error");
+
+fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify({
+        sentence: 'I am very sad'
+    })
+}).then(res => res.json())
+.then(response => {
+    errorField.innerText = 'The service is up & running'
+})
+.catch(error => {
+    console.error('Error:', error);
+    errorField.innerText = 'Servicen har litt vondt i magen atm';
+});
