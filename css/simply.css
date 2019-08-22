@@ -29,12 +29,59 @@ footer {
     "footer footer footer";
     position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
     overflow: visible;
 }
 
+/*--------------
+Crappy flexibility section
+Overusing !important because it doesn't seem to work otherwise
+...and I should have done this the other way around.
+--------------*/
 
+@media screen and (max-width: 1280px) {
+    .right {
+        display: none !important;
+    }
+    header h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* should've done it from phone layout and up */
+@media screen and (max-width: 780px) {
+    #navbar {
+        /*this is turning into cancer*/
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        /*border-bottom-right-radius: 0 !important;*/
+        text-align: center;
+    }
+    #navbar li {
+        display: inline-block;
+    }
+    .left {
+        display: none !important;
+    }
+    header h1 {
+        font-size: 2.7rem;
+    }
+    /*.left {
+        display: inline;
+        float: none;
+        height: 10vh;
+    }*/
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 20vh 10vh;
+        grid-template-areas:
+            "header"
+            "navbar"
+            "content"
+            "footer";
+    }
+}
 
 /*----------------
 General styling
@@ -86,7 +133,6 @@ header,
 
 #navbar ul {
     list-style-type: none;
-
     position: sticky;
     top: 0;
     left: 0;
@@ -145,11 +191,12 @@ Typography
 
 h1,
 h2 {
-    font-family: "Cantarell Light", "Arial", sans-serif;
+    font-family: "Roboto Medium", "Cantarell Light",
+                 "DejaVu Sans Light", "Arial", sans-serif;
 }
 
 li a {
-    font-family: 'Cantarell', 'Ubuntu Regular', 'Noto', 'Liberation Sans',
+    font-family: 'Cantarell', 'Ubuntu Regular', 'Noto', 'DejaVu Sans', 'Liberation Sans',
                  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
 }
