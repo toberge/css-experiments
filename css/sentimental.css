@@ -2,6 +2,8 @@ body {
     background-color: #502332;
     color: white;
     font-family: Comfortaa, "Liberation Sans", Arial, sans-serif;
+
+    transition: background-color 0.3s;
 }
 
 .container {
@@ -23,6 +25,25 @@ body {
 
 #sendme {
     margin-top: 7%;
+}
+
+.debug-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    height: 3%;
+}
+
+.debug-option {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    display: block;
+    float-offset: 0;
+    float: left;
+
+    text-align: center;
 }
 
 @media only screen and (min-aspect-ratio: 9.1 / 16) {
