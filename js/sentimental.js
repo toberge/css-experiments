@@ -99,6 +99,7 @@ for (let i = 0; i < boxes.length; i++) {
 }
 
 
+// giving the user a damn error message if test goes wrong
 let errorField = document.getElementById("error");
 
 fetchSentiment("i am very sad")
@@ -108,7 +109,10 @@ fetchSentiment("i am very sad")
 })
 .catch(error => {
     console.error('Error:', error);
-    errorField.innerText = 'Servicen har litt vondt i magen atm';
+    errorField.innerText = 'Servicen har litt vondt i magen atm (Service down)';
+    if (typeof InstallTrigger !== 'undefined') { // is firefox, https://stackoverflow.com/a/9851769
+        errorField.innerHTML += '<br> Firefox: Try disabling mixed content protection <strong>for this page</strong>.';
+    }
 });
 
 })();
