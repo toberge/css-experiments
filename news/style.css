@@ -1,12 +1,14 @@
-@media screen and (max-width: 10800px) { /*TODO revert when done*/
+@media screen and (max-width: 12800px) { /*TODO revert when done*/
     main {
         margin: 0 auto;
-        width: 80%;
+        max-width: 1080px;
     }
     header {
         height: 20%
     }
 }
+
+
 
 @supports not (display: grid) {
 
